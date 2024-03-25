@@ -25,8 +25,8 @@ pipeline {
                        sh """
                             scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@3.135.207.245:/home/ubuntu/apache-tomcat-9.0.87/webapps/
                             
-                            ssh ubuntu@3.135.207.245:/home/ubuntu/apache-tomcat-9.0.87/bin/shutdown.sh
-                            ssh ubuntu@3.135.207.245:/home/ubuntu/apache-tomcat-9.0.87/bin/startup.sh
+                            ssh ubuntu@3.135.207.245 /home/ubuntu/apache-tomcat-9.0.87/bin/shutdown.sh
+                            ssh ubuntu@3.135.207.245 /home/ubuntu/apache-tomcat-9.0.87/bin/startup.sh
                             
                           """
     
