@@ -20,7 +20,7 @@ pipeline {
                   steps{
                      
                        
-                       sshagent(['ec2-user']) {
+                      sshagent(['TOMCAT']) {
                        
                        sh """
                             scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@3.135.207.245:/home/ubuntu/apache-tomcat-9.0.87/webapps/
